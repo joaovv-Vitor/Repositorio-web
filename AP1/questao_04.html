@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Notificação</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Estilo do card de notificação */
+    .notification-card {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 250px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      z-index: 1000;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      color: #888;
+    }
+
+    .close-btn:hover {
+      color: #000;
+    }
+
+    .card-content h3 {
+      margin: 0 0 10px 0;
+    }
+
+    .card-content p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <h1>Bem-vindo à nossa página!</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula justo ac est blandit, vitae viverra sem eleifend. Fusce nec neque et arcu porta congue. Vestibulum sodales cursus dui, vitae tincidunt purus euismod nec. Integer porta fermentum augue, nec placerat libero tincidunt sed. Nullam lobortis tincidunt felis at ultrices. Pellentesque iaculis diam in nunc placerat, in pulvinar justo finibus. Proin vel sem vel odio iaculis bibendum sed ac risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer facilisis, libero at volutpat bibendum, ipsum eros sagittis nisi, a efficitur mauris leo a erat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue, purus at porttitor hendrerit, mi tortor facilisis ligula, vel volutpat nunc mauris nec justo. Vestibulum a justo at lorem porta sagittis. Aenean laoreet magna nec purus sagittis congue.</p>
+    <p>Repita esse parágrafo para forçar a rolagem...</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+  </div>
+
+  <div class="notification-card" id="notificacao">
+    <div class="card-header">
+      <button class="close-btn" onclick="fecharCard()">X</button>
+    </div>
+    <div class="card-content">
+      <h3>Novidade!</h3>
+      <p>Confira nossos novos produtos.</p>
+    </div>
+  </div>
+
+  <script>
+    function fecharCard() {
+      const card = document.getElementById("notificacao");
+      card.style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

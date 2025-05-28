@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Visualizador de Pokémon</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #488ea7;
+    }
+
+    #titulo {
+      color: #b4bee9;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 8px;
+      border: none;
+      background-color: #58b96f;
+      color: #060708;
+      font-weight: bold;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+    <h1 id="titulo">Visualizador de Pokémon</h1>
+  <img id="pokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Pokémon">
+
+  <div class="button-container">
+    <button onclick="mudarPokemon(-1)">Voltar -1</button>
+    <button onclick="mudarPokemon(1)">Adiantar +1</button>
+  </div>
+
+  <script>
+    let numeroAtual = 1;
+
+    function mudarPokemon(delta) {
+      const novaId = numeroAtual + delta;
+      if (novaId >= 1 && novaId <= 100) {
+        numeroAtual = novaId;
+        const img = document.getElementById("pokemon");
+        img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${numeroAtual}.svg`;
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 01</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #4aa5dd;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            min-height: calc(100vh - 120px); /* altura total menos header e footer */
+        }
+
+        aside {
+            background-color: #4d6174;
+            padding: 20px;
+            width: 30%; /* 30% para o menu lateral */
+            box-sizing: border-box;
+        }
+
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        aside ul li {
+            margin-bottom: 10px;
+        }
+
+        aside ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        main {
+            background-color: #f8f8ff;
+            padding: 20px;
+            width: 70%; 
+            box-sizing: border-box;
+        }
+
+        .image-placeholder {
+            width: 100%;         
+            height: 150px;       
+            background-color: #87CEFA;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* menu vai para cima em telas pequenas */
+        @media (max-width: 400px) {
+            .container {
+                flex-direction: column; 
+            }
+
+            aside, main {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Desenvolvimento de Software WEB</h1>
+    </header>
+
+    <div class="container">
+        <aside>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <h2>Introdução ao HTML</h2>
+            <p>Ipsum Lorem...</p>
+            <div class="image-placeholder">Imagem 1</div>
+            <p>Ipsum Lorem...</p>
+            <div class="image-placeholder">Imagem 2</div>
+        </main>
+    </div>
+
+    <footer>
+        <p></p>
+        <p>fulanodetal@ufc.br <br> 2025.1 <br>Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
